@@ -1,6 +1,6 @@
 # import json
 
-path = "QA_2026/data.txt"
+path = "data.txt"
 with open(path) as file:
     print(file.read())
 
@@ -11,12 +11,12 @@ data = {
 }
 
 try:
-    num = input("enter number...")
-    if(num > 0):
+    num = int(input("enter number..."))
+    if num > 0:
         print("Positive number")
-    elif(num < 0):
+    elif num < 0:
         print("Negative number")
-except:
+except ValueError:
     print("Error")
 
 print(data["username"])
